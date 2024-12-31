@@ -1,18 +1,27 @@
-variable "rgs" {
+variable "name" {
+  default = null
+  type    = string
+}
+
+variable "location" {
+  default = null
+  type    = string
+}
+
+variable "tags" {
   default = {}
   type    = map(any)
 }
 
 module "rg" {
-  for_each = var.rgs
   source   = "Azure/avm-res-resources-resourcegroup/azurerm"
   version  = "0.1.0"
 
-  name     = each.key
-  location = each.value.location
-  tags     = each.value.tags
+  name     = var.name
+  location = var.location
+  tags     = var.tags
 }
 
-output "rgs" {
+output "all" {
   value = module.rg
 }

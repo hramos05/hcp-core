@@ -5,7 +5,6 @@ component "rg" {
     rgs = {
       "rg-demo-eastus2-001" = {
         location = "eastus2"
-        tags     = {}
       }
     }
   }
@@ -24,8 +23,7 @@ component "storage" {
     storage = {
       "stdemoeastus2001" = {
         location            = "eastus2"
-        resource_group_name = component.rg.rgs[0].name
-        tags                = {}
+        resource_group_name = component.rg.all.name
       }
     }
   }
