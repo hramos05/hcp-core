@@ -5,7 +5,7 @@ component "rg" {
     name     = "rg-demo-eastus2-001"
     location = "eastus2"
     tags     = {
-      tag1 = "tag1value"
+      tag1 = "tag1value1"
     }
   }
 
