@@ -3,6 +3,15 @@ required_providers {
     source  = "hashicorp/azurerm"
     version = "4.14.0"
   }
+  random = {
+    source  = "hashicorp/random"
+    version = "~> 3.5.1"
+  }
+  modtm = {
+    source  = "Azure/modtm"
+    version = "0.3.2"
+  }
+
 }
 
 provider "azurerm" "this" {
@@ -17,3 +26,6 @@ provider "azurerm" "this" {
     subscription_id     = "93a8efc3-6f8c-4269-837a-871917e91ff0"
   }
 }
+
+provider "random" "this" {}
+provider "modtm" "this" {}

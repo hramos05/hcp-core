@@ -12,6 +12,8 @@ component "rg" {
 
   providers = {
     azurerm = provider.azurerm.this
+    random  = provider.random.this
+    modtm   = provider.modtm.this
   }
 
 }
