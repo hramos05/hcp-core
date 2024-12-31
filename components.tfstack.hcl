@@ -33,6 +33,7 @@ component "storage" {
   providers = {
     azurerm = provider.azurerm.this
     azapi   = provider.azapi.this
+    random  = provider.random.this
     modtm   = provider.modtm.this
   }
 }
