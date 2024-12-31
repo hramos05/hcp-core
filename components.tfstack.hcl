@@ -4,7 +4,9 @@ component "rg" {
   inputs = {
     name     = "rg-demo-eastus2-001"
     location = "eastus2"
-    tags     = {}
+    tags     = {
+      tag1 = "tag1value"
+    }
   }
 
   providers = {
