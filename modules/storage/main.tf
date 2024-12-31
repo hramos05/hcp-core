@@ -8,11 +8,6 @@ variable "resource_group_name" {
   type    = string
 }
 
-variable "resource_group_name" {
-  default = null
-  type    = string
-}
-
 variable "location" {
   default = null
   type    = string
