@@ -27,7 +27,3 @@ module "storage" {
   location            = var.location
   tags                = var.tags
 }
-
-output "all" {
-  value = module.storage
-}
