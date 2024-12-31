@@ -1,19 +1,38 @@
-variable "storage" {
+variable "name" {
+  default = null
+  type    = string
+}
+
+variable "resource_group_name" {
+  default = null
+  type    = string
+}
+
+variable "resource_group_name" {
+  default = null
+  type    = string
+}
+
+variable "location" {
+  default = null
+  type    = string
+}
+
+variable "tags" {
   default = {}
   type    = map(any)
 }
 
 module "storage" {
-  for_each = var.storage
-  source   = "Azure/avm-res-storage-storageaccount/azurerm"
-  version  = "0.2.8"
+  source  = "Azure/avm-res-storage-storageaccount/azurerm"
+  version = "0.2.8"
 
-  name                = each.key
-  resource_group_name = each.value.resource_group_name
-  location            = each.value.location
-  tags                = each.value.tags
+  name                = var.name
+  resource_group_name = var.resource_group_name
+  location            = var.location
+  tags                = var.tags
 }
 
-output "storage" {
+output "all" {
   value = module.storage
 }

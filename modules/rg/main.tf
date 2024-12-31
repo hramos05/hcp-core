@@ -14,8 +14,8 @@ variable "tags" {
 }
 
 module "rg" {
-  source   = "Azure/avm-res-resources-resourcegroup/azurerm"
-  version  = "0.1.0"
+  source  = "Azure/avm-res-resources-resourcegroup/azurerm"
+  version = "0.1.0"
 
   name     = var.name
   location = var.location

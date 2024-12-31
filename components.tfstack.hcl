@@ -3,7 +3,7 @@ component "rg" {
 
   inputs = {
     name     = "rg-demo-eastus2-001"
-    location = eastus2
+    location = "eastus2"
     tags     = {}
   }
 
@@ -18,12 +18,10 @@ component "storage" {
   source = "./modules/storage"
 
   inputs = {
-    storage = {
-      "stdemoeastus2001" = {
-        location            = "eastus2"
-        resource_group_name = component.rg.all.name
-      }
-    }
+    name                = "stdemoeastus2001"
+    location            = "eastus2"
+    resource_group_name = component.rg.all.name
+    tags                = {}
   }
 
   providers = {
