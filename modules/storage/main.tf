@@ -20,7 +20,7 @@ variable "tags" {
 
 module "storage" {
   source  = "Azure/avm-res-storage-storageaccount/azurerm"
-  version = "0.2.8"
+  version = "0.3.0"
 
   name                = var.name
   resource_group_name = var.resource_group_name
